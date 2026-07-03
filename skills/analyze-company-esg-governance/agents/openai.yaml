@@ -1,0 +1,4 @@
+interface:
+  display_name: "Company ESG Governance Analysis"
+  short_description: "Analyze listed company ESG and governance quality"
+  default_prompt: "Use $analyze-company-esg-governance to assess a listed company ESG profile, ownership, management fit, incentives, governance history, and risks."
