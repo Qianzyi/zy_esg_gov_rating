@@ -19,6 +19,19 @@ Produce evidence-backed ESG and governance analysis for listed companies. Separa
 6. When information is not directly disclosed, label it as an inference: "can be summarized as", "appears to", "public sources do not show", or "needs continued monitoring".
 7. Draft in the user's requested style. If the user asks for one paragraph, keep one paragraph. If they ask for detailed analysis, use concise sections.
 
+## ESG Paragraph Mode
+
+When the user asks for an ESG analysis paragraph, write a single Chinese paragraph of about 800 Chinese characters unless the user specifies another length. Do not use headings, bullets, numbered lists, or section labels.
+
+Follow this internal order inside the paragraph:
+
+1. State what the company does: main products/services, application scenarios, industry-chain position, and business model traits.
+2. Summarize the core ESG issues based on the company's business attributes and disclosures, not as an unsupported official claim. For manufacturing companies, usually check environmental compliance, energy and emissions, hazardous waste, occupational health and safety, product quality, supply-chain responsibility, customer concentration, R&D/IP protection, information disclosure, and board/internal-control governance.
+3. Describe integrated practice around those issues: governance structure, management systems, certifications, environmental investment or facility upgrades, employee safety/training, quality controls, supplier/customer management, investor communication, anti-corruption, and disclosure practices. Tie each practice back to the issue it addresses.
+4. Give an overall ESG evaluation: strengths, disclosure quality, gaps, residual risks, and monitoring points. Use balanced language such as "overall ESG performance is stable but disclosure depth still needs improvement".
+
+Source requirements: use the latest annual report, standalone ESG/sustainability/social responsibility report if publicly available, company website, exchange announcements, and broader web search. If no standalone ESG report is found, say so precisely: "public searches did not show a standalone ESG report; the analysis mainly relies on annual-report ESG/social responsibility content, company website disclosures, and public information." For the recurring Lante Optics (`688127.SH`) ESG prompt, the paragraph must specifically answer: what Lante Optics does, its core ESG issues, integrated ESG practice, and overall ESG evaluation.
+
 ## Source Discipline
 
 Prefer sources in this order:
