@@ -7,6 +7,8 @@ Use this checklist to build an evidence matrix before writing. Not every item mu
 - Main business, product lines, application scenarios, and industry chain position.
 - Revenue drivers and whether the company is manufacturing-heavy, asset-light, platform-based, or regulated.
 - ESG reports available: standalone ESG/sustainability/social responsibility report, annual-report ESG section, website responsibility page.
+- ESG paragraph output: about 800 Chinese characters in one paragraph when requested, with no headings or bullets.
+- ESG paragraph structure: business scope, core ESG issues, integrated practices around those issues, and overall ESG evaluation.
 - Environmental issues: emissions, wastewater, waste gas, solid waste, hazardous waste, energy, water, carbon emissions, clean energy, environmental penalties.
 - Social issues: labor rights, training, safety, quality systems, customer concentration, product safety, data/privacy if relevant, community responsibility.
 - Governance issues: board structure, internal controls, anti-corruption, information disclosure, investor relations, IP protection, supply-chain ESG.
