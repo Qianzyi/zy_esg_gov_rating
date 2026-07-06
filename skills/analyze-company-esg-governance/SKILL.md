@@ -17,7 +17,7 @@ Produce evidence-backed ESG and governance analysis for listed companies. Separa
 4. Extract facts for six blocks: business and ESG, ownership and control, management background and fit, interest misalignment, governance track record/risk, and verification evidence.
 5. Rate management fit as high, medium, or low, and explain why using role coverage, industry experience, execution record, incentives, succession, and independence checks.
 6. When information is not directly disclosed, label it as an inference: "can be summarized as", "appears to", "public sources do not show", or "needs continued monitoring".
-7. Draft using the Mandatory Full Output Contract unless the user explicitly asks for only ESG, only governance, or a different format. If the user asks for one paragraph, keep one paragraph. If they ask for a formal report, use concise sections while preserving the required content.
+7. Draft using the Mandatory Full Output Contract unless the user explicitly asks for only ESG, only governance, or a different format. For full ESG and governance requests, default to producing a compact formal PDF report when the environment supports file creation. If the user explicitly asks for chat-only text, Word, Markdown, or no file, follow that requested format.
 
 ## Mandatory Full Output Contract
 
@@ -27,11 +27,11 @@ When the user asks to analyze a public company's "ESG and corporate governance",
 2. Governance analysis: cover ownership structure, management background and fit, potential interest misalignment, historical governance performance, and governance risks. Governance analysis must cover ownership structure with traits such as SOE/private/family/founder/institution-led, concentration, actual controller, top holders, pledges/freezes when material; management fit must be rated high, medium, or low with detailed reasons.
 3. Verification Expert: add a final visible section named "验证专家检查" or equivalent. The Verification Expert must perform an accuracy check against the collected sources, identify unsupported or uncertain claims, correct factual errors before final delivery, and state whether the final text is supported by annual reports, ESG reports, company website, filings, and broader internet sources. If errors, overstatements, or unsupported claims are found, the agent must revise the final answer before delivering it. If any fact remains uncertain, mark it as "需进一步核验" instead of presenting it as certain.
 
-Do not omit any of these three components just because the user asks for a "report", "analysis", "rating", or names the skill directly. If the user asks for a Word/PDF/report deliverable, the document must still contain these three components.
+Do not omit any of these three components just because the user asks for a "report", "analysis", "rating", or names the skill directly. By default, full ESG and governance analysis should be delivered as a PDF containing these three components. If the user asks for a Word/PDF/report deliverable, the document must still contain these three components. If PDF generation is unavailable in the current environment, provide the full text in chat and clearly say that the PDF could not be created.
 
-## Formal Report and PDF Deliverables
+## Default PDF and Formal Report Deliverables
 
-When the user asks for a formal report, Word document, or PDF:
+When the user invokes this skill for a full ESG and governance analysis, produce a PDF by default unless the user explicitly requests another format. When creating the default PDF, or when the user asks for a formal report, Word document, or PDF:
 
 1. Preserve the three required components: ESG analysis, governance analysis, and Verification Expert.
 2. Use a compact research-note layout. Start page 1 with the company name, ticker, report basis or as-of date, and a short disclaimer, then begin the substantive content on page 1.
@@ -93,7 +93,7 @@ Default to this order for full ESG and governance requests:
 2. Governance analysis: ownership structure and control traits; management background and fit rating; potential conflicts or incentive misalignment; historical governance performance; governance risks and overall judgment.
 3. Verification Expert: brief accuracy check, correction notes if any, and remaining uncertainties.
 
-For Word/PDF/formal-report requests, use the same content order but a compact report layout: title and report basis at the top of page 1, content starts immediately, no mostly blank cover, no first-page summary table unless requested, sources at the end.
+For ordinary full ESG and governance requests, use the same content order and default to a compact PDF report. In the chat response, provide the PDF path/link and a short completion note; the PDF itself should contain the full analysis, Verification Expert section, and sources. For Word/PDF/formal-report requests, use a compact report layout: title and report basis at the top of page 1, content starts immediately, no mostly blank cover, no first-page summary table unless requested, sources at the end.
 
 For Chinese investment-research writing, use direct evaluative wording equivalent to "ESG performance is medium-high", "management fit is high", "stable governance record", "medium structural risk", "monitor independent director substance", and "track related-party transactions and capital-operation fairness".
 
@@ -107,3 +107,4 @@ For Chinese investment-research writing, use direct evaluative wording equivalen
 - Do not output only governance analysis when the user asks for ESG and governance together.
 - Do not skip the Verification Expert section; it is part of the deliverable, not an optional internal thought.
 - Do not make a PDF report with a mostly blank cover page or a first-page summary table unless the user requested those elements.
+- Do not default to a chat-only answer for a full ESG and governance request unless the user explicitly asks for chat-only text or PDF creation is unavailable.
