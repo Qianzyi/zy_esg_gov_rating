@@ -2,6 +2,14 @@
 
 Use this checklist to build an evidence matrix before writing. Not every item must appear in the final answer, but missing high-risk items should be checked or explicitly marked unavailable.
 
+## Mandatory Output Contract
+
+- Full ESG and governance requests must include: ESG analysis, governance analysis, and Verification Expert.
+- ESG analysis must be about 800 Chinese characters in one paragraph, with no internal headings or bullets.
+- ESG paragraph must answer: company business, core ESG issues, integrated ESG practices, and overall ESG evaluation.
+- Governance analysis must cover ownership structure, management background, management fit rating, potential interest misalignment, historical governance performance, and governance risks.
+- Verification Expert must run an accuracy check against annual reports, ESG reports, company website, filings, and broader internet sources; correct unsupported claims before final delivery; and flag unresolved uncertainties as "needs further verification" or "需进一步核验".
+
 ## Business and ESG
 
 - Main business, product lines, application scenarios, and industry chain position.
@@ -72,3 +80,13 @@ Low fit:
 - Low governance risk: dispersed or balanced control, clean history, strong board checks, transparent disclosure, aligned incentives.
 - Medium governance risk: concentrated founder/family control with clean history but limited external checks or succession clarity.
 - High governance risk: control disputes, pledges/freeze pressure, related-party abuse, penalties, funds occupation, illegal guarantees, weak controls, or repeated disclosure issues.
+
+## Verification Expert
+
+- Check that company name, ticker, market, reporting year, and "as of" date are correct.
+- Check that the business description matches annual report and company website wording.
+- Check whether a standalone ESG/sustainability/social responsibility report exists; if not, say the search did not show one.
+- Check ESG metrics, environmental penalties, certifications, carbon/energy data, employee/safety data, supplier practices, and governance claims against sources.
+- Check shareholder percentages, actual controller, family relationships, pledges/freezes, management titles, and recent board changes against the latest filings.
+- Check whether regulatory penalties, exchange inquiry letters, lawsuits, funds occupation, illegal guarantees, and auditor opinions are current and accurately framed.
+- Rewrite or qualify any sentence that cannot be sourced. Do not leave a known error in the final answer.
