@@ -4,14 +4,14 @@ Use this checklist to build an evidence matrix before writing. Not every item mu
 
 ## Mandatory Output Contract
 
-- Full ESG and governance requests must include: ESG analysis, governance analysis, and Verification Expert.
+- Full ESG and governance requests must include: ESG analysis, governance analysis, a section named "机构投资者尽责管理关注点", and a section named "报告内容二次核验情况".
 - ESG analysis must be about 800 Chinese characters. In default PDF/formal reports, split it into 3-4 natural paragraphs with no internal headings or bullets. Use one paragraph only for chat-only output or when explicitly requested.
 - ESG paragraph must answer: company business, core ESG issues, integrated ESG practices, and overall ESG evaluation.
 - Governance analysis must cover ownership structure, management background, management fit rating, potential interest misalignment, historical governance performance, and governance risks.
-- Verification Expert must run an accuracy check against annual reports, ESG reports, company website, filings, and broader internet sources; correct unsupported claims before final delivery; and flag unresolved uncertainties as "needs further verification" or "需进一步核验".
+- "报告内容二次核验情况" must briefly state whether core facts were checked against annual reports, ESG reports, company website, filings, and broader internet sources. Keep the paragraph within 100 Chinese characters where possible; correct unsupported claims before final delivery and flag unresolved uncertainties as "需进一步核验".
 
 - Full ESG and governance requests default to a PDF deliverable when file creation is available. Use chat-only text, Word, Markdown, or another format only when the user explicitly requests it or PDF generation is unavailable.
-- For Word/PDF/formal reports, use a compact research-note layout: title and report basis at the top of page 1, substantive content starts on page 1, no mostly blank cover page, no first-page summary table unless requested, Verification Expert and sources at the end, and render-check PDFs before delivery.
+- For Word/PDF/formal reports, use a compact research-note layout: title at the top of page 1, substantive content starts on page 1, body paragraphs use first-line indentation of about two Chinese characters, and there is no "主要依据", "报告口径", "免责声明", investment-advice disclaimer, legal-opinion disclaimer, mostly blank cover page, or first-page summary table unless requested. Put "机构投资者尽责管理关注点", "报告内容二次核验情况", and sources at the end, and render-check PDFs before delivery.
 
 ## Business and ESG
 
@@ -86,7 +86,14 @@ Low fit:
 - Medium governance risk: concentrated founder/family control with clean history but limited external checks or succession clarity.
 - High governance risk: control disputes, pledges/freeze pressure, related-party abuse, penalties, funds occupation, illegal guarantees, weak controls, or repeated disclosure issues.
 
-## Verification Expert
+## Institutional Investor Stewardship
+
+- Add a section titled "机构投资者尽责管理关注点" before "报告内容二次核验情况".
+- Use a small table with 3-5 rows, not a long prose section.
+- Recommended columns: "关注点", "尽责管理动作", and "需跟踪信号".
+- Focus on institutional investor stewardship actions such as engagement, voting, escalation, disclosure requests, ESG/governance risk monitoring, related-party transaction review, capital allocation discipline, and remediation tracking.
+
+## 报告内容二次核验情况
 
 - Check that company name, ticker, market, reporting year, and "as of" date are correct.
 - Check that the business description matches annual report and company website wording.
@@ -95,3 +102,4 @@ Low fit:
 - Check shareholder percentages, actual controller, family relationships, pledges/freezes, management titles, and recent board changes against the latest filings.
 - Check whether regulatory penalties, exchange inquiry letters, lawsuits, funds occupation, illegal guarantees, and auditor opinions are current and accurately framed.
 - Rewrite or qualify any sentence that cannot be sourced. Do not leave a known error in the final answer.
+- Final report wording should be concise, preferably within 100 Chinese characters, under the title "报告内容二次核验情况".
