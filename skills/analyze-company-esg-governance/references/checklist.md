@@ -10,12 +10,15 @@ Use this checklist to build an evidence matrix before writing. Not every item mu
 - Governance analysis must cover ownership structure, management background, management fit rating, potential interest misalignment, historical governance performance, and governance risks.
 - Verification Expert must run an accuracy check against annual reports, ESG reports, company website, filings, and broader internet sources; correct unsupported claims before final delivery; and flag unresolved uncertainties as "needs further verification" or "需进一步核验".
 
+- For Word/PDF/formal reports, use a compact research-note layout: title and report basis at the top of page 1, substantive content starts on page 1, no mostly blank cover page, no first-page summary table unless requested, Verification Expert and sources at the end, and render-check PDFs before delivery.
+
 ## Business and ESG
 
 - Main business, product lines, application scenarios, and industry chain position.
 - Revenue drivers and whether the company is manufacturing-heavy, asset-light, platform-based, or regulated.
 - ESG reports available: standalone ESG/sustainability/social responsibility report, annual-report ESG section, website responsibility page.
 - ESG paragraph output: about 800 Chinese characters in one paragraph when requested, with no headings or bullets.
+- If the user explicitly asks for natural paragraphs in a formal report, split the ESG analysis into 3-4 natural paragraphs while preserving the required logic and approximate length.
 - ESG paragraph structure: business scope, core ESG issues, integrated practices around those issues, and overall ESG evaluation.
 - Environmental issues: emissions, wastewater, waste gas, solid waste, hazardous waste, energy, water, carbon emissions, clean energy, environmental penalties.
 - Social issues: labor rights, training, safety, quality systems, customer concentration, product safety, data/privacy if relevant, community responsibility.
