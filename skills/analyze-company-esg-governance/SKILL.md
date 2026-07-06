@@ -23,7 +23,7 @@ Produce evidence-backed ESG and governance analysis for listed companies. Separa
 
 When the user asks to analyze a public company's "ESG and corporate governance", the final answer must include three components in this order unless the user explicitly narrows the task:
 
-1. ESG analysis: one Chinese paragraph of about 800 Chinese characters. The ESG analysis must be about 800 Chinese characters and must not use internal headings, bullets, or numbered lists. It must answer: what business the company conducts; what the core ESG issues are; what integrated practices the company has around those issues; and the overall ESG evaluation.
+1. ESG analysis: about 800 Chinese characters. In the default PDF/formal-report output, split the ESG analysis into 3-4 natural paragraphs with no internal headings, bullets, or numbered lists. In chat-only output, or when the user explicitly asks for "one paragraph", use one Chinese paragraph. It must answer: what business the company conducts; what the core ESG issues are; what integrated practices the company has around those issues; and the overall ESG evaluation.
 2. Governance analysis: cover ownership structure, management background and fit, potential interest misalignment, historical governance performance, and governance risks. Governance analysis must cover ownership structure with traits such as SOE/private/family/founder/institution-led, concentration, actual controller, top holders, pledges/freezes when material; management fit must be rated high, medium, or low with detailed reasons.
 3. Verification Expert: add a final visible section named "验证专家检查" or equivalent. The Verification Expert must perform an accuracy check against the collected sources, identify unsupported or uncertain claims, correct factual errors before final delivery, and state whether the final text is supported by annual reports, ESG reports, company website, filings, and broader internet sources. If errors, overstatements, or unsupported claims are found, the agent must revise the final answer before delivering it. If any fact remains uncertain, mark it as "需进一步核验" instead of presenting it as certain.
 
@@ -36,14 +36,16 @@ When the user invokes this skill for a full ESG and governance analysis, produce
 1. Preserve the three required components: ESG analysis, governance analysis, and Verification Expert.
 2. Use a compact research-note layout. Start page 1 with the company name, ticker, report basis or as-of date, and a short disclaimer, then begin the substantive content on page 1.
 3. Do not create a mostly blank cover page unless the user explicitly asks for a cover. Do not put a summary table on the first page unless the user asks for it.
-4. Use concise section headings for report readability. If the user asks for the ESG analysis to be split into natural paragraphs, split it into 3-4 natural paragraphs while keeping the same internal logic: business, core ESG issues, integrated practices, overall evaluation.
+4. Use concise section headings for report readability. In default PDF/formal reports, the ESG section must be split into 3-4 natural paragraphs while keeping the same internal logic: business, core ESG issues, integrated practices, overall evaluation. Do not leave the ESG section as one large paragraph in a PDF report unless the user explicitly asks for one paragraph.
 5. Expand the governance section in formal reports. Cover ownership/control, management background and fit rating, potential interest misalignment, historical governance record, and risk conclusion with enough detail for a finance report.
 6. Put "验证专家检查" and a source table after the analysis. Sources should include annual report, ESG/sustainability report if available, latest governance announcements, company website, and broader web or regulatory checks used.
 7. For PDFs, render and visually inspect the final output before delivery. Check Chinese fonts, page breaks, tables, headers/footers, and that page 1 is not visually empty.
 
 ## ESG Paragraph Mode
 
-When writing the ESG part, write a single Chinese paragraph of about 800 Chinese characters unless the user specifies another length. Do not use internal headings, bullets, numbered lists, or section labels inside the ESG paragraph.
+When writing the ESG part in chat-only mode, or when the user explicitly asks for one paragraph, write a single Chinese paragraph of about 800 Chinese characters unless the user specifies another length. Do not use internal headings, bullets, numbered lists, or section labels inside the ESG paragraph.
+
+For the default PDF/formal-report output, split the same ESG analysis into 3-4 natural paragraphs by idea: business profile, core ESG issues, integrated ESG practices, and overall evaluation. Keep the combined length around 800 Chinese characters, and do not add subheadings, bullets, numbered lists, or section labels inside the ESG text.
 
 Follow this internal order inside the paragraph:
 
@@ -89,7 +91,7 @@ Do not turn company self-description into an unqualified conclusion. For example
 
 Default to this order for full ESG and governance requests:
 
-1. ESG analysis: about 800 Chinese characters, one paragraph, no internal headings or bullets.
+1. ESG analysis: about 800 Chinese characters. Use 3-4 natural paragraphs in default PDF/formal reports; use one paragraph only for chat-only output or when explicitly requested. Do not use internal headings or bullets inside the ESG text.
 2. Governance analysis: ownership structure and control traits; management background and fit rating; potential conflicts or incentive misalignment; historical governance performance; governance risks and overall judgment.
 3. Verification Expert: brief accuracy check, correction notes if any, and remaining uncertainties.
 
@@ -108,3 +110,4 @@ For Chinese investment-research writing, use direct evaluative wording equivalen
 - Do not skip the Verification Expert section; it is part of the deliverable, not an optional internal thought.
 - Do not make a PDF report with a mostly blank cover page or a first-page summary table unless the user requested those elements.
 - Do not default to a chat-only answer for a full ESG and governance request unless the user explicitly asks for chat-only text or PDF creation is unavailable.
+- Do not keep the ESG analysis as one large paragraph in a default PDF/formal report unless the user explicitly asks for one paragraph.
