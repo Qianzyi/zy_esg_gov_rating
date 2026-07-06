@@ -1,4 +1,4 @@
 interface:
   display_name: "Company ESG Governance Analysis"
   short_description: "Create listed-company ESG, governance, and stewardship PDF reports"
-  default_prompt: "Use $analyze-company-esg-governance to create a PDF report on a listed company's ESG profile, ownership, management fit, governance risks, and institutional-investor stewardship points."
+  default_prompt: "Use $analyze-company-esg-governance to create a PDF report on a listed company's ESG profile, ownership, management fit, governance risks, institutional-investor stewardship table, data source table, and final verification sentence."
