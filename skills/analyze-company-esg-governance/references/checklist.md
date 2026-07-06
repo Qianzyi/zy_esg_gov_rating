@@ -10,6 +10,7 @@ Use this checklist to build an evidence matrix before writing. Not every item mu
 - Governance analysis must cover ownership structure, management background, management fit rating, potential interest misalignment, historical governance performance, and governance risks.
 - Verification Expert must run an accuracy check against annual reports, ESG reports, company website, filings, and broader internet sources; correct unsupported claims before final delivery; and flag unresolved uncertainties as "needs further verification" or "需进一步核验".
 
+- Full ESG and governance requests default to a PDF deliverable when file creation is available. Use chat-only text, Word, Markdown, or another format only when the user explicitly requests it or PDF generation is unavailable.
 - For Word/PDF/formal reports, use a compact research-note layout: title and report basis at the top of page 1, substantive content starts on page 1, no mostly blank cover page, no first-page summary table unless requested, Verification Expert and sources at the end, and render-check PDFs before delivery.
 
 ## Business and ESG
