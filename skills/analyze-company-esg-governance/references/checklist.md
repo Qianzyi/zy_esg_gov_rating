@@ -5,7 +5,7 @@ Use this checklist to build an evidence matrix before writing. Not every item mu
 ## Mandatory Output Contract
 
 - Full ESG and governance requests must include: ESG analysis, governance analysis, and Verification Expert.
-- ESG analysis must be about 800 Chinese characters in one paragraph, with no internal headings or bullets.
+- ESG analysis must be about 800 Chinese characters. In default PDF/formal reports, split it into 3-4 natural paragraphs with no internal headings or bullets. Use one paragraph only for chat-only output or when explicitly requested.
 - ESG paragraph must answer: company business, core ESG issues, integrated ESG practices, and overall ESG evaluation.
 - Governance analysis must cover ownership structure, management background, management fit rating, potential interest misalignment, historical governance performance, and governance risks.
 - Verification Expert must run an accuracy check against annual reports, ESG reports, company website, filings, and broader internet sources; correct unsupported claims before final delivery; and flag unresolved uncertainties as "needs further verification" or "需进一步核验".
@@ -18,8 +18,9 @@ Use this checklist to build an evidence matrix before writing. Not every item mu
 - Main business, product lines, application scenarios, and industry chain position.
 - Revenue drivers and whether the company is manufacturing-heavy, asset-light, platform-based, or regulated.
 - ESG reports available: standalone ESG/sustainability/social responsibility report, annual-report ESG section, website responsibility page.
-- ESG paragraph output: about 800 Chinese characters in one paragraph when requested, with no headings or bullets.
-- If the user explicitly asks for natural paragraphs in a formal report, split the ESG analysis into 3-4 natural paragraphs while preserving the required logic and approximate length.
+- ESG output: about 800 Chinese characters, no internal headings or bullets.
+- For default PDF/formal reports, split the ESG analysis into 3-4 natural paragraphs while preserving the required logic and approximate length.
+- If the user explicitly asks for one paragraph or chat-only text, keep the ESG analysis in one paragraph.
 - ESG paragraph structure: business scope, core ESG issues, integrated practices around those issues, and overall ESG evaluation.
 - Environmental issues: emissions, wastewater, waste gas, solid waste, hazardous waste, energy, water, carbon emissions, clean energy, environmental penalties.
 - Social issues: labor rights, training, safety, quality systems, customer concentration, product safety, data/privacy if relevant, community responsibility.
