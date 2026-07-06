@@ -29,6 +29,18 @@ When the user asks to analyze a public company's "ESG and corporate governance",
 
 Do not omit any of these three components just because the user asks for a "report", "analysis", "rating", or names the skill directly. If the user asks for a Word/PDF/report deliverable, the document must still contain these three components.
 
+## Formal Report and PDF Deliverables
+
+When the user asks for a formal report, Word document, or PDF:
+
+1. Preserve the three required components: ESG analysis, governance analysis, and Verification Expert.
+2. Use a compact research-note layout. Start page 1 with the company name, ticker, report basis or as-of date, and a short disclaimer, then begin the substantive content on page 1.
+3. Do not create a mostly blank cover page unless the user explicitly asks for a cover. Do not put a summary table on the first page unless the user asks for it.
+4. Use concise section headings for report readability. If the user asks for the ESG analysis to be split into natural paragraphs, split it into 3-4 natural paragraphs while keeping the same internal logic: business, core ESG issues, integrated practices, overall evaluation.
+5. Expand the governance section in formal reports. Cover ownership/control, management background and fit rating, potential interest misalignment, historical governance record, and risk conclusion with enough detail for a finance report.
+6. Put "验证专家检查" and a source table after the analysis. Sources should include annual report, ESG/sustainability report if available, latest governance announcements, company website, and broader web or regulatory checks used.
+7. For PDFs, render and visually inspect the final output before delivery. Check Chinese fonts, page breaks, tables, headers/footers, and that page 1 is not visually empty.
+
 ## ESG Paragraph Mode
 
 When writing the ESG part, write a single Chinese paragraph of about 800 Chinese characters unless the user specifies another length. Do not use internal headings, bullets, numbered lists, or section labels inside the ESG paragraph.
@@ -81,6 +93,8 @@ Default to this order for full ESG and governance requests:
 2. Governance analysis: ownership structure and control traits; management background and fit rating; potential conflicts or incentive misalignment; historical governance performance; governance risks and overall judgment.
 3. Verification Expert: brief accuracy check, correction notes if any, and remaining uncertainties.
 
+For Word/PDF/formal-report requests, use the same content order but a compact report layout: title and report basis at the top of page 1, content starts immediately, no mostly blank cover, no first-page summary table unless requested, sources at the end.
+
 For Chinese investment-research writing, use direct evaluative wording equivalent to "ESG performance is medium-high", "management fit is high", "stable governance record", "medium structural risk", "monitor independent director substance", and "track related-party transactions and capital-operation fairness".
 
 ## Common Mistakes
@@ -92,3 +106,4 @@ For Chinese investment-research writing, use direct evaluative wording equivalen
 - Do not overstate ESG disclosure quality when the company has only annual-report ESG sections and no standalone ESG report.
 - Do not output only governance analysis when the user asks for ESG and governance together.
 - Do not skip the Verification Expert section; it is part of the deliverable, not an optional internal thought.
+- Do not make a PDF report with a mostly blank cover page or a first-page summary table unless the user requested those elements.
