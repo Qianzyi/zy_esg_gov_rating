@@ -1,4 +1,4 @@
 interface:
   display_name: "Company ESG Governance Analysis"
   short_description: "Create listed-company ESG, governance, and stewardship PDF reports"
-  default_prompt: "Use $analyze-company-esg-governance to create an evidence-backed ESG and governance PDF report. For governance-only requests, use the detailed ownership, director table, executive-capability, related-party transaction, capital-allocation, risk-tracking, source-table, and visual-QA contract."
+  default_prompt: "Use $analyze-company-esg-governance and route by scope. For ESG plus governance, make ESG chapter one and renumber the complete governance flow as chapters two through ten. For governance-only requests, omit ESG and use the nine-chapter ownership, director table, executive-capability, related-party transaction, capital-allocation, risk-tracking, source-table, and visual-QA contract."

@@ -24,7 +24,7 @@ Produce evidence-backed ESG and governance analysis for listed companies. Separa
 When the user asks to analyze a public company's "ESG and corporate governance", the final answer or default PDF report must include these five components in this order unless the user explicitly narrows the task:
 
 1. ESG analysis section: use a visible section heading such as "ESG分析". Write about 1000-2000 Chinese characters. In the default PDF/formal-report output, split the ESG analysis into 4-6 natural paragraphs with no internal headings, bullets, or numbered lists. In chat-only output, or when the user explicitly asks for "one paragraph", use one Chinese paragraph unless that would make readability unacceptable. It must answer: what business the company conducts; what the core ESG issues are; what integrated practices the company has around those issues; and the overall ESG evaluation. Expand the ESG practice discussion with concrete, sourced practices such as ESG governance structure, environmental targets and progress, energy/carbon/waste/water actions, certifications, supplier management, employee safety/training, quality, information security, anti-corruption, investor communication, and disclosure gaps.
-2. Governance analysis section: use a visible section heading such as "公司治理分析". Cover ownership structure, management background and fit, potential interest misalignment, historical governance performance, and governance risks. Governance analysis must cover ownership structure with traits such as SOE/private/family/founder/institution-led, concentration, actual controller, top holders, pledges/freezes when material; management fit must be rated high, medium, or low with detailed reasons.
+2. Governance analysis section: cover ownership structure, management background and fit, potential interest misalignment, historical governance performance, and governance risks. In an integrated formal report, the consecutively numbered governance chapters after `一、ESG分析` satisfy this component; do not add a redundant `公司治理分析` wrapper heading. Governance analysis must cover ownership structure with traits such as SOE/private/family/founder/institution-led, concentration, actual controller, top holders, pledges/freezes when material; management fit must be rated high, medium, or low with detailed reasons.
 3. Institutional investor stewardship table: add a visible section named "机构投资者尽责管理关注点". Present 3-5 substantive points in a small table, not a long prose section. The table must connect stewardship actions with the company's development stage and financial fundamentals, such as growth drivers, margin pressure, capital expenditure, M&A, leverage, cash flow, customer concentration, supply-chain resilience, related transactions, dividend/buyback policy, or return on invested capital. Suggested columns: "关注点", "与公司发展和财务基本面的关系", "尽责管理动作", and "需跟踪信号". Internally verify every stewardship point against collected sources; if verification finds a problem, revise the table before delivery. Do not include the stewardship verification process in the report.
 4. Data source table: add a visible table titled "数据来源" after the institutional-investor stewardship table. Include the annual report, ESG/sustainability report if available, company website/IR page, latest governance announcements, and broader web/regulatory sources actually used.
 5. Final verification note: do not add a separate visible "报告内容二次核验情况" section. Perform the secondary verification internally, correct factual errors before delivery, and place this exact sentence as the final visible sentence of the report: "报告内容已基于公开资料完成二次核验。". If any fact remains uncertain, mark it as "需进一步核验" in the relevant body text instead of presenting it as certain.
@@ -36,16 +36,41 @@ Do not omit any required component just because the user asks for a "report", "a
 Before delivering any full ESG and governance report, run this mandatory output gate and revise the report if any item is missing. All five items are required; the stewardship table, data source table, and final verification sentence are additions to the core ESG and governance analysis, not replacements for them:
 
 - The report contains a visible "ESG分析" section or equivalent ESG analysis heading.
-- The report contains a visible "公司治理分析" section or equivalent governance analysis heading.
+- The report contains the complete numbered governance chapter flow after the ESG chapter; a separate "公司治理分析" wrapper heading is not required.
 - The report contains a visible "机构投资者尽责管理关注点" table.
 - The report contains a visible "数据来源" table.
 - The final visible sentence is exactly: "报告内容已基于公开资料完成二次核验。"
+
+## Dual-Mode Report Routing
+
+Choose one report mode before drafting. Do not blend the two structures.
+
+### Integrated ESG and Governance Report
+
+Use this mode when the user explicitly asks for both ESG and governance, including wording such as "ESG和公司治理", "ESG与治理", or "ESG and corporate governance".
+
+- Use a visible title such as `[公司名]ESG与公司治理分析`.
+- ESG chapter 1 must be `一、ESG分析`. Generate it under the ESG Paragraph Mode: about 1000-2000 Chinese characters, normally 4-6 natural paragraphs in a PDF, with sourced company-specific metrics and no internal subheadings or bullets.
+- Move the complete governance-only chapter flow after ESG and renumber every numbered governance chapter by one. The default flow is: `二、核心判断`; `三、公司发展阶段与治理议题定位`; `四、股权结构与控制链`; `五、董事会成员、来源与能力匹配`; `六、高级管理人员与治理能力匹配`; `七、关联交易`; `八、资金占用、担保、诉讼与内部控制`; `九、资本配置与中小股东保护`; `十、治理风险等级与后续跟踪清单`.
+- Keep the management capability matrix inside chapter six. Keep the institutional-investor stewardship table inside or immediately after chapter ten as an unnumbered subsection titled `机构投资者尽责管理关注点`.
+- End with the visible `数据来源` table and the exact verification sentence. Include the ESG/sustainability report and any nature/climate report actually used in the source table.
+
+### Governance-Only Report
+
+Use this mode when the user asks only for corporate governance, governance analysis, board analysis, ownership/control, related-party transactions, or similar governance work without explicitly requesting ESG.
+
+- Use a visible title such as `[公司名]公司治理分析`.
+- Do not add ESG content, an ESG chapter, ESG metrics, or a sustainability overview merely because this skill also supports ESG.
+- Start substantive content on page 1 with `一、核心判断`, then use the nine-chapter Governance-Only Formal Report Contract exactly. Keep the executive roster and capability matrix in the same numbered chapter.
+- Use the same compact PDF layout, source table, final verification sentence, and page-by-page visual QA as the integrated mode.
+
+If a prompt explicitly mentions both ESG and governance, route to the integrated mode. Generic wording such as "治理分析" routes to governance-only mode. Ask a clarifying question only when the requested scope is genuinely ambiguous and cannot be inferred from the user's wording or attached material.
 
 ## Default PDF and Formal Report Deliverables
 
 When the user invokes this skill for a full ESG and governance analysis, produce a PDF by default unless the user explicitly requests another format. When creating the default PDF, or when the user asks for a formal report, Word document, or PDF:
 
-1. Preserve the five required components: "ESG分析" section, "公司治理分析" section, "机构投资者尽责管理关注点" table, "数据来源" table, and the exact final one-sentence verification note "报告内容已基于公开资料完成二次核验。". Do not create a separate "报告内容二次核验情况" section.
+1. Preserve the five required components: chapter `一、ESG分析`, the complete consecutively numbered governance chapters, the `机构投资者尽责管理关注点` table, the `数据来源` table, and the exact final one-sentence verification note "报告内容已基于公开资料完成二次核验。". Do not add a redundant `公司治理分析` wrapper or create a separate "报告内容二次核验情况" section.
 2. Use a compact research-note layout. Start page 1 with only the company name, ticker, and report title, then begin the substantive content on page 1. Do not add a separate "主要依据", "报告口径", "免责声明", investment-advice disclaimer, legal-opinion disclaimer, or long source-basis paragraph on page 1 unless the user explicitly asks for it.
 3. Do not create a mostly blank cover page unless the user explicitly asks for a cover. Do not put a summary table on the first page unless the user asks for it.
 4. Use first-line indentation of about two Chinese characters (2em) for every body paragraph in the PDF/formal report. Table cells, headings, and source lists do not need first-line indentation.
@@ -83,7 +108,7 @@ The governance section must answer the user's full governance question, not only
 
 ## Governance-Only Formal Report Contract
 
-When the user asks only for corporate governance analysis, default to a detailed formal PDF if file creation is available. Apply this contract unless the user requests a narrower scope or another format.
+When the user asks only for corporate governance analysis, default to a detailed formal PDF if file creation is available. Do not add ESG content. Apply this contract unless the user requests a narrower scope or another format.
 
 ### Chapter Flow
 
@@ -119,7 +144,7 @@ End with the institutional-investor stewardship table when relevant, a visible `
 
 ### PDF Layout Lock
 
-- Page 1 must contain a visible report title such as `[公司名]公司治理分析`, followed immediately by `一、核心判断`. Do not create a separate cover page or table of contents unless explicitly requested.
+- Page 1 must contain a visible mode-specific report title. Governance-only reports use `[公司名]公司治理分析` followed immediately by `一、核心判断`; integrated reports use `[公司名]ESG与公司治理分析` followed immediately by `一、ESG分析`. Do not create a separate cover page or table of contents unless explicitly requested.
 - Use a compact A4 research-note layout: approximately 16 mm side margins, 16-20 pt report title, 15-16 pt numbered chapter headings, 9-10 pt body text, dark navy headings, pale blue table fills, restrained accent colors, and consistent headers/footers.
 - Prefer evidence tables, ownership/control diagrams, board-source bars, and related-transaction charts over long generic prose. Do not place cards inside cards.
 - Keep each numbered heading with meaningful following content. Avoid orphan headings, large unexplained blank areas, clipped text, subtitle/chart overlap, and tables that begin with only a header or one stranded row.
@@ -149,14 +174,14 @@ Do not turn company self-description into an unqualified conclusion. For example
 
 ## Output Pattern
 
-Default to this order for full ESG and governance requests:
+Default to the Integrated ESG and Governance Report chapter order for full ESG and governance requests:
 
 1. ESG analysis: about 1000-2000 Chinese characters. Use 4-6 natural paragraphs in default PDF/formal reports; use one paragraph only for chat-only output or when explicitly requested. Do not use internal headings or bullets inside the ESG text.
-2. Governance analysis: ownership structure and control traits; management background and fit rating; potential conflicts or incentive misalignment; historical governance performance; governance risks and overall judgment.
+2. Governance analysis: use chapters two through ten from the Dual-Mode Report Routing section, preserving the detailed director table, executive-capability chapter, related-party transaction analysis, capital-allocation analysis, and risk-tracking table.
 3. 机构投资者尽责管理关注点: small table with 3-5 stewardship points that connect to company development and financial fundamentals, recommended actions, and tracking signals. Internally verify this table and revise any unsupported point before delivery.
 4. 数据来源 and final verification sentence: put a visible "数据来源" table at the end, then add the exact final sentence "报告内容已基于公开资料完成二次核验。". Do not create a separate verification section.
 
-For ordinary full ESG and governance requests, use the same content order and default to a compact PDF report. In the chat response, provide the PDF path/link and a short completion note; the PDF itself must contain the full "ESG分析" section, full "公司治理分析" section, "机构投资者尽责管理关注点" table, "数据来源" table, and the exact final sentence "报告内容已基于公开资料完成二次核验。". For Word/PDF/formal-report requests, use a compact report layout: title at the top of page 1, content starts immediately, body paragraphs have about two Chinese characters of first-line indentation, no separate first-page "主要依据" or "免责声明" paragraph, no mostly blank cover, no first-page summary table unless requested, sources at the end followed by the exact final sentence.
+For ordinary full ESG and governance requests, use the same content order and default to a compact PDF report. In the chat response, provide the PDF path/link and a short completion note; the PDF itself must contain chapter `一、ESG分析`, the full governance chapter flow numbered `二` through `十`, the `机构投资者尽责管理关注点` table, the `数据来源` table, and the exact final sentence "报告内容已基于公开资料完成二次核验。". For Word/PDF/formal-report requests, use a compact report layout: title at the top of page 1, content starts immediately, body paragraphs have about two Chinese characters of first-line indentation, no separate first-page "主要依据" or "免责声明" paragraph, no mostly blank cover, no first-page summary table unless requested, sources at the end followed by the exact final sentence.
 
 For Chinese investment-research writing, use direct evaluative wording equivalent to "ESG performance is medium-high", "management fit is high", "stable governance record", "medium structural risk", "monitor independent director substance", and "track related-party transactions and capital-operation fairness".
 
@@ -168,8 +193,9 @@ For Chinese investment-research writing, use direct evaluative wording equivalen
 - Do not omit the date of the filing or report year when ownership or management has recently changed.
 - Do not overstate ESG disclosure quality when the company has only annual-report ESG sections and no standalone ESG report.
 - Do not output only governance analysis when the user asks for ESG and governance together.
+- Do not add ESG analysis when the user asks only for governance.
 - Do not output only the stewardship table, data source table, and final verification sentence. These are mandatory additions after the ESG analysis and governance analysis, not replacements.
-- Do not omit the "ESG分析" section or "公司治理分析" section in a full ESG and governance request.
+- Do not omit chapter `一、ESG分析` or any governance chapter from `二` through `十` in a full ESG and governance request.
 - Do not create a separate "报告内容二次核验情况" section; secondary verification is an internal step and the report should only end with one short verification sentence.
 - Do not make a PDF report with a mostly blank cover page or a first-page summary table unless the user requested those elements.
 - Do not default to a chat-only answer for a full ESG and governance request unless the user explicitly asks for chat-only text or PDF creation is unavailable.
