@@ -84,6 +84,21 @@ Low fit:
 - Executive compensation basis, clawback/deferred pay arrangements if disclosed, equity incentives, and assessment mechanisms.
 - Investor relations activity: performance briefings, IR records, website, Q&A, and shareholder communication.
 
+## Governance-Only PDF Report Gate
+
+- Page 1 has a visible `[公司名]公司治理分析` title and then begins with `一、核心判断`; there is no separate cover page or table of contents unless requested.
+- Default numbered flow: core judgment; development stage and governance issues; ownership/control chain; directors/source/fit; executives and capability matrix in one chapter; related-party transactions; funds occupation/guarantees/litigation/internal control; capital allocation/minority protection; risk level/tracking list.
+- The director section uses one continuous table with repeated headers. Each director row covers current role/committee, nomination or shareholder source when material, education/professional qualifications, career and company history, relevant capability, fit rating, and reasons.
+- The executive section covers strategy-critical leaders with education, career path, company tenure, responsibilities, disclosed equity/incentives, and fit. The capability matrix is a subsection of the same numbered chapter, not a separate numbered chapter.
+- Ownership evidence includes the actual controller, direct and indirect control chain, major and strategic shareholders, percentages, concert-party or voting arrangements, pledges/freezes when material, and board nomination sources.
+- Related-party analysis separates recurring operating transactions from financial services and distinguishes actual amount, period-end balance, forecast/approved amount, and cap.
+- Recurring transaction evidence includes counterparty, type, actual amount, forecast/approval, share or concentration, variance, and next-period forecast when disclosed.
+- Financial transaction evidence includes agreement/cap, actual occurrence or balance, pricing basis, maturity when disclosed, relationship, approval, independent-director review, and recusal.
+- Related-party conclusions address amount, counterparty concentration, pricing fairness, approval and recusal mechanisms, disclosure, funding safety, and minority-shareholder implications; they are not generic.
+- Wind/financial-terminal data used for profiles, holdings, metrics, or discovery is cross-checked against annual reports and announcements for people, nomination sources, transaction terms, counterparties, and effective dates.
+- The PDF uses a compact A4 research-note layout with consistent title, chapter styles, tables, charts, headers, and footers. Multi-page tables repeat headers and remain readable.
+- Every PDF page is rendered and visually inspected. There are no orphan headings, chart/subtitle overlaps, clipped text, stranded table headers, large unexplained blank areas, or missing source/final-verification content.
+
 ## Final Risk Language
 
 - Low governance risk: dispersed or balanced control, clean history, strong board checks, transparent disclosure, aligned incentives.

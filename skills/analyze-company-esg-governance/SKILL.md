@@ -1,6 +1,6 @@
 ---
 name: analyze-company-esg-governance
-description: Use when analyzing a public company for ESG profile, ownership structure, controller/family/SOE traits, management background and fit, incentive conflicts, governance history, or governance risks, especially when drafting investor due diligence or research-note text from annual reports, ESG reports, exchange filings, company websites, and web sources.
+description: Use when analyzing a public company for ESG profile or a governance-only formal report covering ownership/control, directors and executives, management fit, related-party transactions, capital allocation, governance history, stewardship, and governance risks, especially when drafting investor due diligence or PDF research notes from annual reports, ESG reports, exchange filings, company websites, financial terminals, and web sources.
 ---
 
 # Analyze Company ESG Governance
@@ -81,6 +81,51 @@ The governance section must answer the user's full governance question, not only
 5. Historical governance performance: check funds occupation, illegal guarantees, financial/internal-control audit opinions, regulatory penalties, exchange inquiry or warning letters, litigation/arbitration, disclosure corrections, auditor changes, independent director performance, board/committee operation, and investor relations.
 6. Governance risk conclusion: give a clear risk level and explain observed red flags versus structural risks.
 
+## Governance-Only Formal Report Contract
+
+When the user asks only for corporate governance analysis, default to a detailed formal PDF if file creation is available. Apply this contract unless the user requests a narrower scope or another format.
+
+### Chapter Flow
+
+Use this default order and adapt names only when company-specific facts require it:
+
+1. `一、核心判断`: a compact evidence table covering control, board structure, management fit, structural risks, and governance record.
+2. `二、公司发展阶段与治理议题定位`: connect governance needs to strategy, operating footprint, capital intensity, financial position, and current development stage.
+3. `三、股权结构与控制链`: show the actual controller, direct and indirect control chain, major/strategic shareholders, ownership percentages, and board nomination sources when material.
+4. `四、董事会成员、来源与能力匹配`: show board-source composition and one consolidated director table.
+5. `五、高级管理人员与治理能力匹配`: place the executive roster, individual fit analysis, overall assessment, and governance capability matrix in the same numbered chapter. Do not create a separate numbered chapter for the capability matrix.
+6. `六、关联交易`: analyze amounts, counterparties, pricing/approval mechanisms, recusals, limits, actual use, and risks instead of giving only a generic conclusion.
+7. `七、资金占用、担保、诉讼与内部控制`.
+8. `八、资本配置与中小股东保护`: include dividends, buybacks, financing authorization, leverage, and ROIC/cash-flow implications when material.
+9. `九、治理风险等级与后续跟踪清单`: distinguish observed red flags from structural risks and provide actionable monitoring signals.
+
+End with the institutional-investor stewardship table when relevant, a visible `数据来源` table, and the exact verification sentence required by this skill.
+
+### Directors and Executives
+
+- Present all directors in one continuous table rather than separate profile cards. Recommended columns: `姓名`, `最新职务 / 来源`, `基础信息与教育`, and `背景 / 任职史与匹配度`.
+- For each director, include current role and committee roles, education or professional qualification, career history, participation in the company's development, relevant operating/investment/legal/accounting/digital expertise, and an explicit high/medium/low fit judgment with reasons. Identify the nominating shareholder or shareholder system when it is material and supported by filings.
+- Repeat the table header across pages and allow rows to split only when necessary. Keep the text readable; do not solve density only by shrinking the font.
+- For executives, include the chair/CEO or president, COO, CFO, board secretary, legal/compliance head, and other strategy-critical leaders. Cover education, career path, company tenure, responsibilities, disclosed shareholding/incentives, and stage-specific fit.
+- Follow the executive profiles with a capability matrix in the same chapter. Typical dimensions include operations/safety, overseas investment, finance/capital, legal/compliance/disclosure, digitalization, and shareholder-resource coordination.
+
+### Related-Party Transaction Depth
+
+- Separate recurring operating transactions from financial-service transactions. Distinguish actual transaction amount, period-end balance, forecast/approved amount, and credit or service cap; never compare these as if they were the same measure.
+- For recurring operating transactions, use a chart plus a detailed table when data permit. Show counterparty, transaction type, actual amount, prior forecast or approval, share of the total or revenue, variance, and next-period forecast.
+- For financial transactions, use a cap-versus-actual-balance chart plus a table covering agreement/limit, actual occurrence or balance, pricing terms, maturity when disclosed, and relationship to the company.
+- Analyze counterparty concentration, year-on-year or forecast variance, market-based pricing evidence, board/shareholder approval, independent-director review, related director/shareholder recusal, disclosure quality, funding safety, and minority-shareholder implications.
+- State precisely when a counterparty leaves the related-party scope because of director or control changes, and verify the effective date from the relevant announcement.
+
+### PDF Layout Lock
+
+- Page 1 must contain a visible report title such as `[公司名]公司治理分析`, followed immediately by `一、核心判断`. Do not create a separate cover page or table of contents unless explicitly requested.
+- Use a compact A4 research-note layout: approximately 16 mm side margins, 16-20 pt report title, 15-16 pt numbered chapter headings, 9-10 pt body text, dark navy headings, pale blue table fills, restrained accent colors, and consistent headers/footers.
+- Prefer evidence tables, ownership/control diagrams, board-source bars, and related-transaction charts over long generic prose. Do not place cards inside cards.
+- Keep each numbered heading with meaningful following content. Avoid orphan headings, large unexplained blank areas, clipped text, subtitle/chart overlap, and tables that begin with only a header or one stranded row.
+- Use repeated headers for multi-page tables. Long director tables may continue across pages; the table must remain one logical table.
+- Render every PDF page to an image and inspect all pages before delivery. Check title visibility, Chinese fonts, table legibility, line wrapping, page breaks, chart labels, source notes, headers/footers, and final-page completeness. Revise and rerender if any page is visually weak.
+
 ## Source Discipline
 
 Prefer sources in this order:
@@ -90,6 +135,7 @@ Prefer sources in this order:
 - Company website and investor relations pages.
 - Regulator, court, credit, and official penalty databases.
 - Reputable financial media and data terminals as supporting context.
+- Use Wind or another structured financial terminal when available for company profiles, shareholder holdings, financial metrics, market data, and announcement discovery. Treat it as a supplementary structured source: verify board/executive biographies, nomination sources, related-party counterparties, transaction terms, and effective dates against annual reports and formal announcements.
 
 Do not turn company self-description into an unqualified conclusion. For example, "core ESG issues" should usually be framed as "based on business attributes and disclosures, key ESG issues can be summarized as..."
 
